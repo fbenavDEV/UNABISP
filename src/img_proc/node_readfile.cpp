@@ -52,10 +52,11 @@ namespace img_proc
 		}
 		if (!this->_imagesToProcess.empty())
 		{
-			ImageLoaded img = this->_imagesToProcess.front();
+			ImageLoaded img = this->_imagesToProcess.front();			
 			PackImg* pckimg = new PackImg();
 			pckimg->Set_Image(img._image);			
 			this->Add_To_Dictionary(img._name,pckimg);
+			this->_imagesToProcess.pop();
 			this->Broadcast(pckimg);
 		}
 	}

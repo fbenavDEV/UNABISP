@@ -8,7 +8,7 @@ namespace img_proc
 	class NodeGaussian : public protocol::Siso
 	{
 	protected:
-		protocol::Pack* Process(protocol::Pack* input) const;
+		protocol::Pack* Process(protocol::Pack* input);
 	};
 }
 

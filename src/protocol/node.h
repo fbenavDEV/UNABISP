@@ -18,10 +18,22 @@ namespace protocol
 
 	class Node
 	{
+	public:
+		class OnInputEvent
+		{
+		protected:
+			friend class Node;
+			virtual void operator()(const Node* input_node) = 0;
+		};
+
+		class OnMailboxEmptyEvent
+		{
+		protected:
+			friend class Node;
+			virtual void operator()() = 0;
+		};
+
 	private:
-
-		typedef void (Node::*OnInputEvent)(const Node* input_node);
-
 		/**
 		* All output nodes to which the present node is connected
 		*/
@@ -38,7 +50,8 @@ namespace protocol
 		*/
 		mutable bool _stopped;
 
-		OnInputEvent _inputEvent;
+		OnInputEvent* _inputEvent;
+		OnMailboxEmptyEvent* _emptyEvent;
 	protected:
 		/**
 		* All processing is executed in this method, which calls the method Process() in a separate thread.
@@ -102,7 +115,8 @@ namespace protocol
 		* Sets the event that is triggered when a node is connected. 
 		* @param event A pointer to the function that is called when an input node is connected
 		*/
-		void Set_Input_Event(OnInputEvent event);
+		void Set_Input_Event(OnInputEvent* event);
+		void Set_Maibox_Empty_Event(OnMailboxEmptyEvent* event);
 	};
 
 	inline bool Node::Stopped() const

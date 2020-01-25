@@ -15,7 +15,7 @@ namespace protocol
 	protected:
 		void Process();
 		bool Mailbox_Empty() const;
-		virtual Pack* Process(Pack* input) const = 0;
+		virtual Pack* Process(Pack* input) = 0;
 	public:
 		Siso();
 		void Pack_Push(Pack* pack);

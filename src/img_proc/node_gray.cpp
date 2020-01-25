@@ -5,7 +5,7 @@
 
 namespace img_proc
 {
-	protocol::Pack* NodeGray::Process(protocol::Pack* input) const
+	protocol::Pack* NodeGray::Process(protocol::Pack* input)
 	{
 		PackImg* np = new PackImg();				
 		PackImg* ip = static_cast<PackImg*>(input);

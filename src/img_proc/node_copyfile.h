@@ -19,18 +19,20 @@ namespace img_proc
 		string _filename;
 	};
 
-	class NodeCopyFile : public protocol::Siso
+	class NodeCopyFile : public protocol::Siso, public protocol::Node::OnMailboxEmptyEvent
 	{
 	private:
 		const protocol::Dictionary* _dictionary;
-		uint _sizeImgsToProcess;
-		uint _id;
+		uint _sizeImgsToProcess;		
 		queue<ImageToSave> _imagesToSave;
 		string _path;
 	protected:
-		protocol::Pack* Process(protocol::Pack* input) const;
+		protocol::Pack* Process(protocol::Pack* input);
+		void operator()();
+		void Save_Queue();
 	public:
 		NodeCopyFile();
+		void Set_Dictionary(const protocol::Dictionary& dictionary);
 	};
 }
 

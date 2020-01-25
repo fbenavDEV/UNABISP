@@ -8,6 +8,7 @@ namespace protocol
 		this->_processing = false;
 		this->_stopped = false;
 		this->_inputEvent = nullptr;
+		this->_emptyEvent = nullptr;
 	}
 
 	void Node::Start(uint no_of_threads)
@@ -29,8 +30,12 @@ namespace protocol
 		while ((!this->Mailbox_Empty())&&(!this->_stopped))
 		{
 			this->Process();
-		}
+		}	
 		this->_processing = false;
+		if (this->_emptyEvent)
+		{
+			(*this->_emptyEvent)();
+		}
 	}
 
 	void Node::Stop()
@@ -50,7 +55,7 @@ namespace protocol
 			for (int k = 1; k < n; ++k)
 			{
 				Pack* n_pack = pack->Clone();
-				outputs.push_back(n_pack);
+				outputs[k] = n_pack;
 			}
 			for (int k = 0; k < n; ++k)
 			{
@@ -64,17 +69,14 @@ namespace protocol
 		}
 	}
 
-	void Node::Set_Input_Event(OnInputEvent event)
-	{
-		this->_inputEvent = event;
-	}
+
 
 	void Node::Connect_To_Output(Node* node)
 	{
 		this->_outputNodes.push_back(node);
 		if (node->_inputEvent)
-		{			
-			((*node).*(node->_inputEvent))(this);
+		{
+			(*node->_inputEvent)(this);
 		}
 	}
 }
