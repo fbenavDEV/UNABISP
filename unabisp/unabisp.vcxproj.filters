@@ -1,0 +1,111 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;hm;inl;inc;ipp;xsd</Extensions>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="Header Files\protocol">
+      <UniqueIdentifier>{21269f8c-2cf1-444c-8f38-758186635a90}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\img_proc">
+      <UniqueIdentifier>{dd89c4b5-9fc2-44bf-822e-99f915c6348f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\protocol">
+      <UniqueIdentifier>{d5146fce-61b6-4954-b36f-6e4ff046d4ba}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\img_proc">
+      <UniqueIdentifier>{fe976caf-17cb-471d-a318-9a759e35eea0}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="main.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\protocol\dictionary.cpp">
+      <Filter>Source Files\protocol</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\protocol\mailbox.cpp">
+      <Filter>Source Files\protocol</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\protocol\node.cpp">
+      <Filter>Source Files\protocol</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\protocol\node_generator.cpp">
+      <Filter>Source Files\protocol</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\protocol\pack.cpp">
+      <Filter>Source Files\protocol</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\protocol\siso.cpp">
+      <Filter>Source Files\protocol</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\img_proc\node_camera.cpp">
+      <Filter>Source Files\img_proc</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\img_proc\node_copyfile.cpp">
+      <Filter>Source Files\img_proc</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\img_proc\node_gaussian.cpp">
+      <Filter>Source Files\img_proc</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\img_proc\node_gray.cpp">
+      <Filter>Source Files\img_proc</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\img_proc\node_readfile.cpp">
+      <Filter>Source Files\img_proc</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\img_proc\pack_img .cpp">
+      <Filter>Source Files\img_proc</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\src\img_proc\node_camera.h">
+      <Filter>Header Files\img_proc</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\img_proc\node_copyfile.h">
+      <Filter>Header Files\img_proc</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\img_proc\node_gaussian.h">
+      <Filter>Header Files\img_proc</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\img_proc\node_gray.h">
+      <Filter>Header Files\img_proc</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\img_proc\node_readfile.h">
+      <Filter>Header Files\img_proc</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\img_proc\pack_img.h">
+      <Filter>Header Files\img_proc</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\defs.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\protocol\dictionary.h">
+      <Filter>Header Files\protocol</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\protocol\mailbox.h">
+      <Filter>Header Files\protocol</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\protocol\node.h">
+      <Filter>Header Files\protocol</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\protocol\node_generator.h">
+      <Filter>Header Files\protocol</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\protocol\pack.h">
+      <Filter>Header Files\protocol</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\protocol\siso.h">
+      <Filter>Header Files\protocol</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>
