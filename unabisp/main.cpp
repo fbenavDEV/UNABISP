@@ -16,9 +16,9 @@ int main()
 	{
 		std::smatch sm = *itr;		
 	}
-	std::cout << "Codigo revisado";
+	std::cout << "Codigo revisado";**/
 	std::string s = "0,2,3.5,3.9,4,3";	
-	std::regex rx("\\s*,\\s*");**/
+	std::regex rx("\\s*,\\s*");
 	const std::sregex_iterator end;
 	std::sregex_iterator sitr(std::cbegin(s), std::cend(s), rx);
 	std::smatch ss = *sitr;
