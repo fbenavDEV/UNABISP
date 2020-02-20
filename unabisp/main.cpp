@@ -6,7 +6,7 @@
 
 int main()
 {
-	/**std::string s = "NODE[ASASA9ASA] {sadsadasa dsds} NODE[ssa]{sadsadsadsadsadsa}";
+	std::string s = "NODE[ASASA9ASA] {sadsadasa dsds} NODE[ssa]{sadsadsadsadsadsa}";
 	s.erase(std::remove(s.begin(), s.end(), ' '),s.end());
 	std::regex rx("NODE\\[[\\w]{1,}\\]\\{[\\w]{1,}\\}");
 	//NODE\\[[\\w]{1,}\\]
@@ -16,7 +16,7 @@ int main()
 	{
 		std::smatch sm = *itr;		
 	}
-	std::cout << "Codigo revisado";**/
+	std::cout << "Codigo revisado";
 	std::string s = "0,2,3.5,3.9,4,3";	
 	std::regex rx("\\s*,\\s*");
 	const std::sregex_iterator end;
