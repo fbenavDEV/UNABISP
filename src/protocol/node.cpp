@@ -68,9 +68,7 @@ namespace protocol
 			delete pack;
 		}
 	}
-
-
-
+		
 	void Node::Connect_To_Output(Node* node)
 	{
 		this->_outputNodes.push_back(node);
@@ -78,5 +76,15 @@ namespace protocol
 		{
 			(*node->_inputEvent)(this);
 		}
+	}
+
+	void Node::Set_Input_Event(OnInputEvent* event)
+	{
+		this->_inputEvent = event;
+	}
+
+	void Node::Set_Maibox_Empty_Event(OnMailboxEmptyEvent* event)
+	{
+		this->_emptyEvent = event;
 	}
 }

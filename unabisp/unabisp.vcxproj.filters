@@ -25,6 +25,12 @@
     <Filter Include="Source Files\img_proc">
       <UniqueIdentifier>{fe976caf-17cb-471d-a318-9a759e35eea0}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Header Files\parser">
+      <UniqueIdentifier>{fcdede5a-6b0c-4ff6-bc61-5e2d61245a80}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\parser">
+      <UniqueIdentifier>{36b63b88-ec64-4d0b-a4f1-2d91ddcf9e3d}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp">
@@ -66,6 +72,12 @@
     <ClCompile Include="..\src\img_proc\pack_img .cpp">
       <Filter>Source Files\img_proc</Filter>
     </ClCompile>
+    <ClCompile Include="..\src\parser\node_segmenter.cpp">
+      <Filter>Source Files\parser</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\parser\node_descriptor.cpp">
+      <Filter>Source Files\parser</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\src\img_proc\node_camera.h">
@@ -106,6 +118,12 @@
     </ClInclude>
     <ClInclude Include="..\src\protocol\siso.h">
       <Filter>Header Files\protocol</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\parser\node_segmenter.h">
+      <Filter>Header Files\parser</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\parser\node_descriptor.h">
+      <Filter>Header Files\parser</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

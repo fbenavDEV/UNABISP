@@ -2,6 +2,7 @@
 #define NODE_H
 
 #include <vector>
+#include <atomic>
 #include "pack.h"
 
 namespace protocol
@@ -43,12 +44,12 @@ namespace protocol
 		* This is TRUE when the node is processing and its corresponding processing thread has been
 		* created
 		*/
-		mutable bool _processing;
+		std::atomic<bool> _processing;
 
 		/**
 		It is TRUE when the node stopped and is not processing packages
 		*/
-		mutable bool _stopped;
+		std::atomic<bool> _stopped;
 
 		OnInputEvent* _inputEvent;
 		OnMailboxEmptyEvent* _emptyEvent;
